@@ -1,0 +1,24 @@
+<app-hafh-nav></app-hafh-nav>
+<br>
+<br>
+<div id="vq">
+    <h1>Assigned Quizzes</h1>
+    <table class="table" id="assigned-quizzes-table">
+        <thead>
+            <tr>
+                <th scope="col">Take Quiz</th>
+                <th scope="col">Quiz Title</th>
+                <th scope="col">Quiz Description</th>
+                <th scope="col">Result Grade</th>
+            </tr>
+        </thead>
+        <tbody id="assigned-quizzes-table-body">
+            <tr *ngFor="let uquizze of uquizzes">
+                <button (click)="takeQuiz()">Take Quiz</button>
+                <td>{{uquizze.quiz_title}}</td>
+                <td>{{uquizze.quiz_description}}</td>
+                <td>{{uquizze.results_grade}}</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
